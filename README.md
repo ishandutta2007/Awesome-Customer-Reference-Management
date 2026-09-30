@@ -50,9 +50,9 @@ Below is a comparative, sorted list of top enterprise SaaS solutions in customer
 
 ## 🔓 Open-Source GitHub Projects
 
-Below is a curated selection of open-source tools, CRM foundations, feedback portals, and AI Agent Skills that enable building custom reference management and customer advocacy workflows. **Sorted by GitHub Stars_Count (Descending)**.
+Below is a curated selection of open-source tools, CRM foundations, feedback portals, and AI Agent Skills that enable building custom reference management and customer advocacy workflows. **Sorted by GitHub_Stars_Count (Descending)**.
 
-| Project & Repository 📦 | GitHub Stars_Count 🌟 | License 📄 | Primary Category / Architecture 🧱 | Key Features & Reference Capabilities 🚀 |
+| Project & Repository 📦 | GitHub_Stars_Count 🌟 | License 📄 | Primary Category / Architecture 🧱 | Key Features & Reference Capabilities 🚀 |
 | :--- | :--- | :--- | :--- | :--- |
 | **[Twenty](https://github.com/twentyhq/twenty)** | [<img src="https://img.shields.io/github/stars/twentyhq/twenty?style=social&color=white" alt="twenty stars"/>](https://github.com/twentyhq/twenty/stargazers) | AGPL-3.0 | Modern Open-Source CRM | Extensible data model foundation for custom reference candidate objects, contact fatigue tracking, GraphQL APIs, and custom entity relations. |
 | **[Fider](https://github.com/getfider/fider)** | [<img src="https://img.shields.io/github/stars/getfider/fider?style=social&color=white" alt="fider stars"/>](https://github.com/getfider/fider/stargazers) | AGPL-3.0 | Feedback Portal & Request Tracker | Open-source user feedback portal built with Go and React; used to identify highly engaged product champions and promoters. |
