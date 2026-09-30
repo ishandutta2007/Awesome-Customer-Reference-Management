@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#311042"/>
+    </linearGradient>
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <style>
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; font-size: 44px; fill: url(#text-grad); }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 20px; fill: #94a3b8; }
+      .badge-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 600; font-size: 14px; fill: #e2e8f0; }
+      
+      /* Dynamic pulses and background movement */
+      @keyframes float1 {
+        0% { transform: translate(0px, 0px) scale(1); }
+        50% { transform: translate(30px, -20px) scale(1.08); }
+        100% { transform: translate(0px, 0px) scale(1); }
+      }
+      @keyframes float2 {
+        0% { transform: translate(0px, 0px) scale(1); }
+        50% { transform: translate(-25px, 25px) scale(1.1); }
+        100% { transform: translate(0px, 0px) scale(1); }
+      }
+      @keyframes pulse-glow {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 0.8; }
+      }
+      @keyframes dash {
+        to { stroke-dashoffset: -40; }
+      }
+
+      .bg-blob1 { animation: float1 12s ease-in-out infinite; transform-origin: center; }
+      .bg-blob2 { animation: float2 15s ease-in-out infinite; transform-origin: center; }
+      .glowing-node { animation: pulse-glow 3s ease-in-out infinite; }
+      .flow-line { stroke-dasharray: 8, 8; animation: dash 2s linear infinite; }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="300" rx="16" fill="url(#bg-grad)"/>
+
+  <!-- Dynamic Ambient Glow Blobs in Background -->
+  <circle class="bg-blob1" cx="200" cy="80" r="140" fill="#6366f1" opacity="0.25" filter="url(#glow)"/>
+  <circle class="bg-blob2" cx="1000" cy="220" r="160" fill="#a855f7" opacity="0.2" filter="url(#glow)"/>
+  <circle class="bg-blob1" cx="800" cy="60" r="100" fill="#06b6d4" opacity="0.2" filter="url(#glow)"/>
+
+  <!-- Dynamic Decorative Visual Elements (Background Side Graphics) -->
+  <!-- Left Side Network Nodes -->
+  <g opacity="0.6">
+    <line x1="80" y1="200" x2="150" y2="120" stroke="#475569" stroke-width="2" class="flow-line"/>
+    <line x1="150" y1="120" x2="220" y2="180" stroke="#475569" stroke-width="2"/>
+    <circle cx="80" cy="200" r="6" fill="#38bdf8" class="glowing-node"/>
+    <circle cx="150" cy="120" r="9" fill="#818cf8"/>
+    <circle cx="220" cy="180" r="7" fill="#c084fc"/>
+  </g>
+
+  <!-- Right Side Advocacy Metric Visual -->
+  <g transform="translate(940, 70)" opacity="0.7">
+    <rect width="180" height="160" rx="12" fill="url(#card-grad)" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/>
+    <!-- Simulated Chart Columns -->
+    <rect x="30" y="90" width="20" height="40" rx="4" fill="#38bdf8" opacity="0.8"/>
+    <rect x="65" y="60" width="20" height="70" rx="4" fill="#818cf8" opacity="0.9"/>
+    <rect x="100" y="40" width="20" height="90" rx="4" fill="#c084fc"/>
+    <rect x="135" y="75" width="20" height="55" rx="4" fill="#f43f5e" opacity="0.7"/>
+    <!-- Connecting trendline -->
+    <path d="M 40 85 L 75 55 L 110 35 L 145 70" fill="none" stroke="#f472b6" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Foreground Content Container (Guaranteed Top Layer) -->
+  <g transform="translate(80, 0)">
+    <!-- Category Pill -->
+    <g transform="translate(0, 48)">
+      <rect width="320" height="32" rx="16" fill="#ffffff" fill-opacity="0.1" stroke="#818cf8" stroke-opacity="0.4" stroke-width="1"/>
+      <text x="16" y="21" class="badge-text" fill="#38bdf8">📣 CURATED B2B ADVOCACY ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="130" class="title">Awesome Customer Reference Management</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="172" class="subtitle">Top Enterprise Platforms, Open-Source CRM Modules, &amp; AI Agent Advocacy Skills</text>
+
+    <!-- Feature Tags -->
+    <g transform="translate(0, 210)">
+      <!-- Tag 1 -->
+      <rect x="0" y="0" width="160" height="30" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="12" y="19" class="badge-text">⚡ Reference Matching</text>
+
+      <!-- Tag 2 -->
+      <rect x="172" y="0" width="160" height="30" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="184" y="19" class="badge-text">🛡️ Fatigue Governance</text>
+
+      <!-- Tag 3 -->
+      <rect x="344" y="0" width="160" height="30" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="356" y="19" class="badge-text">🤖 AI Advocacy Skills</text>
+
+      <!-- Tag 4 -->
+      <rect x="516" y="0" width="160" height="30" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="528" y="19" class="badge-text">📊 Impact Attribution</text>
+    </g>
+  </g>
+</svg>
